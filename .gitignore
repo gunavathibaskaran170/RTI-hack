@@ -20,11 +20,12 @@ env/
 backend/.env
 .env
 
-# Database files
+# Database files — exclude SQLite but allow ChromaDB's sqlite3 inside backend/chroma_data
 *.db
 *.sqlite3
+!backend/chroma_data/**
 
-# ChromaDB data (large vector store)
+# Data pipeline raw chroma_data (large vector store, rebuilt from pipeline)
 data_pipeline/chroma_data/
 
 # Node / Next.js

@@ -1,0 +1,46 @@
+services:
+  # ─── BACKEND (FastAPI) ───────────────────────────────────────────
+  - type: web
+    name: rightpath-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    plan: free
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false          # Set this in Render Dashboard
+      - key: JWT_SECRET
+        generateValue: true  # Render auto-generates a strong secret
+      - key: DEMO_MODE
+        value: "True"
+      - key: ENVIRONMENT
+        value: production
+      - key: COOKIE_SECURE
+        value: "True"
+      - key: COOKIE_SAMESITE
+        value: none
+      - key: FRONTEND_URL
+        value: https://rightpath-frontend.onrender.com
+      - key: CHROMA_PATH
+        value: /opt/render/project/src/chroma_data
+      - key: DB_PATH
+        value: /opt/render/project/src/app/db/rightpath.db
+      - key: MODEL_NAME
+        value: qwen/qwen3-32b
+
+  # ─── FRONTEND (Next.js) ──────────────────────────────────────────
+  - type: web
+    name: rightpath-frontend
+    runtime: node
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    plan: free
+    envVars:
+      - key: NEXT_PUBLIC_API_BASE
+        value: https://rightpath-backend.onrender.com
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "3000"
