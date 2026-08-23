@@ -21,7 +21,7 @@ services:
       - key: COOKIE_SAMESITE
         value: none
       - key: FRONTEND_URL
-        value: https://rightpath-frontend.onrender.com
+        value: https://rightpath-frontend-okfe.onrender.com
       - key: CHROMA_PATH
         value: /opt/render/project/src/chroma_data
       - key: DB_PATH
@@ -34,13 +34,15 @@ services:
     name: rightpath-frontend
     runtime: node
     rootDir: frontend
-    buildCommand: npm ci --legacy-peer-deps && npm run build
+    buildCommand: npm install --legacy-peer-deps && npm run build
     startCommand: npm start
     plan: free
     envVars:
       - key: NEXT_PUBLIC_API_BASE
-        value: https://rightpath-backend.onrender.com
+        value: https://rightpath-backend-okfe.onrender.com
       - key: NODE_ENV
         value: production
       - key: PORT
         value: "3000"
+      - key: NODE_OPTIONS
+        value: "--max-old-space-size=400"
