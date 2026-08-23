@@ -34,7 +34,7 @@ services:
     name: rightpath-frontend
     runtime: node
     rootDir: frontend
-    buildCommand: npm ci && npm run build
+    buildCommand: npm ci --legacy-peer-deps && npm run build
     startCommand: npm start
     plan: free
     envVars:
