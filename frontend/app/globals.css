@@ -157,3 +157,48 @@ body {
 .animate-marquee {
   animation: marquee 30s linear infinite;
 }
+
+/* ─── Mobile-first global fixes ─────────────────────────────── */
+
+/* Prevent horizontal overflow on every page */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Ensure images / videos never overflow */
+img, video, iframe {
+  max-width: 100%;
+}
+
+/* Reusable page container — consistent horizontal padding on all screen sizes */
+.page-container {
+  width: 100%;
+  max-width: 80rem;      /* 1280px — matches max-w-7xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;    /* 16px on mobile */
+  padding-right: 1rem;
+}
+@media (min-width: 640px) {
+  .page-container { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+@media (min-width: 1024px) {
+  .page-container { padding-left: 2rem; padding-right: 2rem; }
+}
+
+/* Tap target minimum size for accessibility */
+button, a {
+  min-height: 36px;
+}
+
+/* Fix select dropdowns on iOS */
+select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
