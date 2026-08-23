@@ -1,0 +1,157 @@
+
+<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Goal:** File a lawsuit against neighbor for boundary wall dispute
+   - **Current Status:** Active civil suit pending in District Court since 2024
+   - **Lawyer's Request:** Get neighbor's land registration details to sue for criminal trespass
+   - **Output Requirement:** JSON only
+
+2.  **Identify Key Legal/Practical Issues:**
+   - Boundary disputes are typically civil matters
+   - Criminal trespass requires specific elements (unlawful entry, intent, lack of permission, etc.)
+   - Land registration details are public records in most jurisdictions
+   - Filing a criminal case while a civil case is pending can be complex (potential for abuse of process, res judicata, or parallel proceedings issues)
+   - Jurisdiction matters (country/state laws vary significantly)
+   - I need to provide general guidance, not legal advice, and structure it as JSON
+
+3.  **Determine JSON Structure:**
+   I should create a structured JSON response that covers:
+   - Disclaimer (not legal advice)
+   - Steps to obtain land registration details
+   - Considerations for criminal trespass vs civil dispute
+   - Potential legal implications of parallel proceedings
+   - Recommended next steps
+   - Jurisdictional note
+
+   Structure:
+   ```json
+   {
+     "disclaimer": "...",
+     "land_registration_retrieval": {
+       "steps": [...],
+       "required_documents": [...],
+       "typical_fees": "...",
+       "processing_time": "..."
+     },
+     "criminal_trespass_considerations": {
+       "key_elements": [...],
+       "civil_vs_criminal_distinction": "...",
+       "parallel_proceedings_risk": "..."
+     },
+     "recommended_actions": [...],
+     "jurisdiction_note": "..."
+   }
+   ```
+
+4.  **Draft Content (Mental Refinement):**
+   - *Disclaimer:* Standard legal disclaimer
+   - *Land Registration Retrieval:* 
+     - Steps: Visit local land registry/sub-registrar office, request property record/schedule, provide property details/address, pay fee, obtain certified copy
+     - Required: Property address, survey number, owner name, ID proof, application form
+     - Fees: Varies by jurisdiction (typically nominal)
+     - Processing: 1-14 days depending on region
+   - *Criminal Trespass Considerations:*
+     - Elements: Unlawful entry, intent to annoy/injure/commit offense, lack of lawful authority
+     - Civil vs Criminal: Boundary disputes are usually civil; criminal trespass requires clear unlawful entry beyond mere boundary disagreement
+     - Parallel Proceedings Risk: Courts may view simultaneous civil/criminal cases on same facts as vexatious; criminal case may be stayed pending civil outcome; potential for counterclaims
+   - *Recommended Actions:* 
+     - Consult lawyer on jurisdiction-specific trespass statutes
+     - Verify if boundary wall encroachment meets criminal threshold
+     - Consider filing for injunction/survey in pending civil suit instead
+     - Obtain land records through proper channels
+     - Document all interactions/evidence
+   - *Jurisdiction Note:* Laws vary significantly by country/state; consult local counsel
+
+5.  **Convert to JSON (Strict Format):**
+   Ensure valid JSON, no markdown, no extra text, only JSON object.
+
+   ```json
+   {
+     "disclaimer": "This information is for educational purposes only and does not constitute legal advice. Consult a licensed attorney in your jurisdiction for case-specific guidance.",
+     "land_registration_retrieval": {
+       "steps": [
+         "Identify the local land registry or sub-registrar office with jurisdiction over the property",
+         "Gather property identifiers (address, survey/plot number, owner name)",
+         "Submit a formal application for property records/registration documents",
+         "Pay applicable government fees",
+         "Collect certified copies of the land registration details"
+       ],
+       "required_documents": [
+         "Valid government-issued photo ID",
+         "Property address and survey/plot number",
+         "Application form (available at registry or online portal)",
+         "Proof of interest or legal representation authorization (if applicable)"
+       ],
+       "typical_fees": "Varies by jurisdiction; generally nominal government processing fees",
+       "processing_time": "1 to 14 business days depending on local procedures and digitalization level"
+     },
+     "criminal_trespass_considerations": {
+       "key_elements": [
+         "Unlawful entry onto another's property",
+         "Intent to annoy, intimidate, or commit an offense",
+         "Lack of lawful authority or permission",
+         "Clear evidence of boundary violation beyond reasonable dispute"
+       ],
+       "civil_vs_criminal_distinction": "Boundary disputes are typically civil matters. Criminal trespass requires proof of unlawful entry with specific intent, not merely a disagreement over property lines.",
+       "parallel_proceedings_risk": "Filing a criminal case while a civil suit is pending on the same facts may be viewed as vexatious or an abuse of process. Courts may stay criminal proceedings pending civil resolution, and opposing counsel may file counter-motions or complaints regarding harassment."
+     },
+     "recommended_actions": [
+       "Verify with your attorney whether the alleged conduct meets the statutory definition of criminal trespass in your jurisdiction",
+       "Request a court-appointed surveyor or boundary determination through the pending civil suit",
+       "Obtain land registration records through official channels as outlined",
+       "Document all boundary-related incidents with photographs, dates, and witness statements",
+       "Discuss alternative civil remedies (injunction, specific performance, damages) with your counsel before pursuing criminal charges"
+     ],
+     "jurisdiction_note": "Property and criminal laws vary significantly by country, state, and local municipality. All procedures and legal standards must be verified against your specific jurisdiction's statutes and court rules."
+   }
+   ```
+
+6.  **Validate JSON:**
+   - Check syntax: All keys quoted, proper commas, arrays/objects properly closed
+   - No markdown formatting (user said "output json only")
+   - Content is accurate, neutral, and structured
+   - Meets all constraints
+
+   The JSON is valid and complete. I will output it exactly as structured.✅
+</think>
+
+{
+  "disclaimer": "This information is for educational purposes only and does not constitute legal advice. Consult a licensed attorney in your jurisdiction for case-specific guidance.",
+  "land_registration_retrieval": {
+    "steps": [
+      "Identify the local land registry or sub-registrar office with jurisdiction over the property",
+      "Gather property identifiers (address, survey/plot number, owner name)",
+      "Submit a formal application for property records/registration documents",
+      "Pay applicable government fees",
+      "Collect certified copies of the land registration details"
+    ],
+    "required_documents": [
+      "Valid government-issued photo ID",
+      "Property address and survey/plot number",
+      "Application form (available at registry or online portal)",
+      "Proof of interest or legal representation authorization (if applicable)"
+    ],
+    "typical_fees": "Varies by jurisdiction; generally nominal government processing fees",
+    "processing_time": "1 to 14 business days depending on local procedures and digitalization level"
+  },
+  "criminal_trespass_considerations": {
+    "key_elements": [
+      "Unlawful entry onto another's property",
+      "Intent to annoy, intimidate, or commit an offense",
+      "Lack of lawful authority or permission",
+      "Clear evidence of boundary violation beyond reasonable dispute"
+    ],
+    "civil_vs_criminal_distinction": "Boundary disputes are typically civil matters. Criminal trespass requires proof of unlawful entry with specific intent, not merely a disagreement over property lines.",
+    "parallel_proceedings_risk": "Filing a criminal case while a civil suit is pending on the same facts may be viewed as vexatious or an abuse of process. Courts may stay criminal proceedings pending civil resolution, and opposing counsel may file counter-motions or complaints regarding harassment."
+  },
+  "recommended_actions": [
+    "Verify with your attorney whether the alleged conduct meets the statutory definition of criminal trespass in your jurisdiction",
+    "Request a court-appointed surveyor or boundary determination through the pending civil suit",
+    "Obtain land registration records through official channels as outlined",
+    "Document all boundary-related incidents with photographs, dates, and witness statements",
+    "Discuss alternative civil remedies (injunction, specific performance, damages) with your counsel before pursuing criminal charges"
+  ],
+  "jurisdiction_note": "Property and criminal laws vary significantly by country, state, and local municipality. All procedures and legal standards must be verified against your specific jurisdiction's statutes and court rules."
+}
